@@ -42,7 +42,6 @@ let
   };
 
 in
-assert stdenv.system == "x86_64-linux";
 mkAggregated {
   pname = "rust-xtensa";
   date = "2024-06-06";

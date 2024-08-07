@@ -8,8 +8,6 @@ let
   };
 in
 
-assert stdenv.system == "x86_64-linux";
-
 stdenv.mkDerivation rec {
   pname = "esp8266-toolchain";
   version = "2020r3";
@@ -38,6 +36,7 @@ stdenv.mkDerivation rec {
     description = "ESP8266 compiler toolchain";
     homepage = "https://docs.espressif.com/projects/esp8266-rtos-sdk/en/latest/get-started/linux-setup.html";
     license = licenses.gpl3;
+    platforms = [ "x86_64-linux" ];
   };
 }
 

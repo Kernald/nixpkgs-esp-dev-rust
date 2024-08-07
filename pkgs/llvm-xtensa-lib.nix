@@ -15,8 +15,6 @@ let
   };
 in
 
-assert stdenv.system == "x86_64-linux";
-
 stdenv.mkDerivation rec {
   pname = "xtensa-llvm-toolchain";
   inherit version;
@@ -37,6 +35,7 @@ stdenv.mkDerivation rec {
     description = "Xtensa LLVM tool chain libraries";
     homepage = "https://github.com/espressif/llvm-project";
     license = licenses.gpl3;
+    platforms = [ "x86_64-linux" ];
   };
 }
 
